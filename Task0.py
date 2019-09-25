@@ -20,3 +20,21 @@ Print messages:
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
 
+def firstText(texts):
+    print(texts[0])
+
+def lastCalls(calls):   
+    index = len(calls) - 1
+    reciverCall = calls[index][1]
+    sendingCall = calls[index][0]
+    timestamp = calls[index][2]
+    segundsCall = calls[index][3]
+    message = 'Last record of calls, {0} calls {1} at time {2}, lasting {3} seconds'.format(
+        reciverCall,
+        sendingCall,
+        timestamp,
+        segundsCall
+    )
+    print(message)
+
+lastCalls(calls)
