@@ -21,7 +21,15 @@ Print messages:
 """
 
 def firstText(texts):
-    print(texts[0])
+    reciverCall = calls[0][1]
+    sendingCall = calls[0][0]
+    timestamp = calls[0][2]
+    message1 = 'First record of texts, {0} texts {1} at time {2}'.format(
+        reciverCall,
+        sendingCall,
+        timestamp,
+    )
+    print(message1)
 
 def lastCalls(calls):   
     index = len(calls) - 1
@@ -36,5 +44,9 @@ def lastCalls(calls):
         segundsCall
     )
     print(message)
+
+
+firstText(texts)
+
 
 lastCalls(calls)
